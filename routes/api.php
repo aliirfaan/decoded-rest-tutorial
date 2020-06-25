@@ -13,8 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('v1/languages', 'Api\v1\LanguageController@index');
-Route::get('v1/languages/{language_id}', 'Api\v1\LanguageController@get');
-Route::post('v1/languages', 'Api\v1\LanguageController@add');
-Route::put('v1/languages/{language_id}', 'Api\v1\LanguageController@update');
-Route::delete('v1/languages/{language_id}', 'Api\v1\LanguageController@delete');
+Route::get(
+    'v1/languages', 
+    'Api\v1\LanguageController@index');
+
+Route::get(
+    'v1/languages/{language_id}', 
+    'Api\v1\LanguageController@get');
+
+Route::post(
+    'v1/languages', 
+    'Api\v1\LanguageController@add');
+
+Route::put(
+    'v1/languages/{language_id}', 
+    'Api\v1\LanguageController@update');
+
+Route::delete(
+    'v1/languages/{language_id}', 
+    'Api\v1\LanguageController@delete');
